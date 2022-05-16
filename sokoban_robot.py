@@ -6,6 +6,7 @@ from ev3dev2.sensor import INPUT_1, INPUT_2, INPUT_3
 from ev3dev2.sensor.lego import ColorSensor, LightSensor
 from ev3dev2.led import Leds
 from ev3dev2.motor import MoveSteering
+import route
 
 import numpy as np
 
@@ -199,7 +200,8 @@ class Sokoban_robot:
 if __name__ =="__main__":
     test = Sokoban_robot()
     #test.linefollower()
-    test.start()
-    test.move_to_next_intersection()
-    test.turn(right=False)
-    test.deliver_can()
+    #test.start()
+    #test.move_to_next_intersection()
+    #test.turn(right=False)
+    #test.deliver_can()
+    test.run_track(route.test_route)
